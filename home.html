@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Loading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="Loading/style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <!-- partial:index.partial.html -->
+    <div class="loading-page">
+
+        <div class="counter">
+
+            <p>LOADING...</p>
+
+            <br>
+
+
+            <h1>0%
+                <!--
+      h1.abs loading
+      h1.abs.color loading
+      -->
+            </h1>
+            <hr/>
+
+
+            <br>
+            <br>
+
+
+
+            <a id="neon-button" style="display:none;" href="index.html">
+                <b>LET'S GO</b></a>
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- partial -->
+    <audio id="autoplay" src="Loading/load.mp3">
+        <script>
+            window.onload = function() {
+                var audio = document.getElementById("autoplay");
+                audio.play();
+            }
+        </script>
+    
+        </audio>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+    <script src="Loading/script.js"></script>
+    <script>
+        setTimeout(function() {
+            document.getElementById('neon-button').style.display = 'block';
+        }, 8000);
+    </script>
+    <script>
+        const neonButton = document.getElementById('neon-button');
+        neonButton.addEventListener('mouseover', () => {
+            neonButton.style.textShadow = '0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000';
+        });
+
+        neonButton.addEventListener('mouseout', () => {
+            neonButton.style.textShadow = '';
+        });
+    </script>
+
+
+
+</body>
+
+</html>

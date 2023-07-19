@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/Event Form.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="header">
+            <p>Event Registration Form</p>
+        </div>
+
+        <form action="event registration.php" method="POST">
+            <div class="row">
+                <div class="col-2">
+                    <p>Name</p>
+                </div>
+                <div class="col-4">
+                    <input type="text" name="f_name" placeholder="First Name" required="">
+                    <small>First name</small>
+                </div>
+                <div class="col-4">
+                    <input type="text" name="l_name" class="ml-4" placeholder="Last name" required="">
+                    <small class="ml-4">Last name</small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <p>Email</p>
+                </div>
+                <div class="col-4">
+                    <input type="email" name="email" placeholder="Email" required="">
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <p>Branch</p>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="branch" placeholder="Branch" required="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        Phone
+                    </div>
+
+                    <div class="col-5">
+                        <input type="number" name="pno" placeholder="Phone Number" required="">
+                        <small>Phone Number</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row-2">
+                        Year->
+                    </div>
+                    <div class="row-5">
+
+                        <input type="radio" name="year" value="I">I<input type="radio" name="year" value="II">II<input type="radio" name="year" value="III">III
+                        <input type="radio" name="year" value="IV">IV
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        Event Name
+                    </div>
+
+                    <div class="col-5">
+
+                        <select id="eventcategory" name="event_category" required>
+                        <option value="RIPPLET">RIPPLET</option>
+                        <option value="CODE GOLF">CODE GOLF</option>
+                        <option value="SELECT * FROM BRAIV">SELECT * FROM BRAIV</option>
+                        <option value="SUFFELED CODES">SUFFELED CODES</option>
+                        <option value="ALGORITHM WRITING">ALGORITHM WRITING</option>
+                    </select>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <p>Payment Receipt No</p>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="userprofile" name="user_profile" placeholder="  Payment Receipt No" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p>VH No</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="number" name="vhno" placeholder="VH No" required="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col-6">
+                        <button class="btn btn-danger" name="register">Register</button>
+                    </div>
+                </div>
+
+        </form>
+
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!-- Created by AARYANX-->
+
+<!DOCTYPE html>
+<!--Created by AARYANX-->
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <title>J.A.R.V.I.S</title>
+    <style>
+        /* Created by AARYANX */
+        
+         :root {
+            --pi: calc(22 / 7);
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .svg-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50vw;
+            height: 50vh;
+            transform: translate(calc(50vw / 2 * -1), calc(50vh / 2* -1));
+        }
+        
+        .clock {
+            font-size: 2em;
+            line-height: 10vh;
+            text-align: center;
+            text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60vw;
+            height: 10vh;
+            transform: translate(calc(60vw / 2 * -1), calc(35vh + 10vh / 2* -1));
+        }
+        
+        .title {
+            font-size: 2em;
+            line-height: 10vh;
+            text-align: center;
+            text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+            color: #fff;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            width: 60vw;
+            height: 10vh;
+            transform: translate(calc(60vw / 2 * -1), calc(10vh / 2* -1));
+            color: white;
+        }
+        
+        svg {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            fill: none;
+            filter: url(#neon);
+        }
+        
+        circle {
+            cx: 100;
+            cy: 100;
+            fill: none;
+            stroke: white;
+        }
+        
+        .circle-96-thin {
+            r: 96;
+            stroke-width: 1px;
+            stroke-dasharray: calc(2*var(--pi)*96);
+        }
+        
+        .circle-96-thick {
+            r: 96;
+            stroke-width: 5px;
+            stroke-dasharray: calc(2*var(--pi)*96*4/100), calc(2*var(--pi)*96*30/100), calc(2*var(--pi)*96*12/100);
+        }
+        
+        .circle-88-thin {
+            r: 88;
+            stroke-width: 1px;
+            stroke-dasharray: calc(2*var(--pi)*88 / 5), calc(2*var(--pi)*88 / 5), calc(2*var(--pi)*88 / 5), calc(2*var(--pi)*88);
+        }
+        
+        .circle-78-thin {
+            r: 78;
+            stroke-width: 0.5px;
+            stroke-dasharray: calc(2*var(--pi)*78*20/100), calc(2*var(--pi)*78);
+        }
+        
+        .circle-70-thick {
+            r: 70;
+            stroke-width: 5px;
+            stroke-dasharray: 2;
+        }
+        
+        .circle-55-thin {
+            r: 55;
+            stroke-width: 1px;
+        }
+        
+        .circle-55-thick {
+            r: 55;
+            stroke-width: 5px;
+            stroke-dasharray: calc(2*var(--pi)*55*4/200), calc(2*var(--pi)*55*30/300), calc(2*var(--pi)*55*12/120);
+        }
+        
+        .circle-40-thin {
+            r: 40;
+            stroke-width: 1px;
+        }
+        
+        .circle-40-thick {
+            r: 40;
+            stroke-width: 5px;
+            stroke-dasharray: 25 10;
+        }
+        
+        .circle-30-thin {
+            r: 25;
+            stroke-width: 1px;
+        }
+        
+        .circle-30-thick {
+            r: 25;
+            stroke-width: 5px;
+            stroke-dasharray: 1 1 2 3;
+        }
+        
+        .circle-15-thin {
+            r: 15;
+            stroke-width: 1px;
+            fill: white;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        a.glow,
+        a.glow:hover,
+        a.glow:focus {
+            text-decoration: none;
+            color: white;
+            text-shadow: blue;
+            -webkit-transition: 500ms linear 0s;
+            -moz-transition: 500ms linear 0s;
+            -o-transition: 500ms linear 0s;
+            transition: 500ms linear 0s;
+            outline: 0 none;
+        }
+        
+        a.glow:hover,
+        a.glow:focus {
+            color: blue;
+            text-shadow: -1px 1px 8px #4043ff, 1px -1px 8px blue;
+        }
+        
+        if (document.createElement("detect").style.textShadow==="") {
+            document.getElementsByTagName("html")[0].className+=" textshadow";
+        }
+        
+        .glow {
+            font-size: ;
+            color: #fff;
+            text-align: center;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #4043ff, 0 0 20px #4043ff, 0 0 30px blue, 0 0 40px #4043ff, 0 0 50px blue, 0 0 60px #4043ff, 0 0 70px blue;
+            }
+            to {
+                text-shadow: 0 0 20px white, 0 0 30px blue, 0 0 40px #4043ff, 0 0 50px blue, 0 0 60px #4043ff, 0 0 70px blue, 0 0 80px #4043ff;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:black;">
+    <!--Created by AARYANX-->
+
+    <!--<marquee style="float:right;width:96%;font-size:16px;font-weight:bold;color:red" behavior="scroll" direction="left" onMouseOut="this.start();" onMouseOver="this.stop();">
+        <a href="http://csehackathon-vtht.epizy.com/" class="glow"><br> <u></u> *</a>
+    </marquee>-->
+
+    <div class="title">J . A . R . V . I . S .</div>
+    <div class="svg-container">
+        <svg viewBox="0 0 200 200" preserveAspectRatio>
+            <!--Created by AARYANX.-->
+    <defs>
+        <filter id="neon">
+            <feFlood flood-color="blue" flood-opacity="1" in="SourceGraphic" />
+            <feComposite operator="in" in2="SourceGraphic" />
+            <feGaussianBlur stdDeviation="15" />
+            <feComponentTransfer result="glow1">
+                <feFuncA type="linear" slope="2" intercept="0" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode in="glow1" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <circle class="circle-96-thin">
+    </circle>
+    <circle class="circle-96-thick">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="760 100 100" to="0 100 100" dur="6s" repeatCount="indefinite" additive="sum" />
+    </circle>
+    <circle class="circle-88-thin">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 100 100" to="320 100 100" dur="2.2s" repeatCount="indefinite" additive="sum" />
+    </circle>
+    <circle class="circle-78-thin">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="720 100 100" to="0 100 100" dur="1.2s" repeatCount="indefinite" />
+    </circle>
+    <circle class="circle-70-thick">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="760 100 100" to="0 100 100" dur="15s" repeatCount="indefinite" additive="sum" />
+    </circle>
+    <circle class="circle-55-thin"></circle>
+    <circle class="circle-55-thick">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="760 100 100" to="0 100 100" dur="0.5s" repeatCount="indefinite" additive="sum" />
+    </circle>
+    <circle class="circle-40-thin"></circle>
+    <circle class="circle-40-thick">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="760 100 100" to="0 100 100" dur="0.5s" repeatCount="indefinite" additive="sum" />
+    </circle>
+    <circle class="circle-30-thin"></circle>
+    <circle class="circle-30-thick">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="760 100 100" to="0 100 100" dur="0.5s" repeatCount="indefinite" additive="sum" />
+    </circle>
+    <circle class="circle-15-thin"></circle>
+    </svg>
+    </div>
+    <!--Created by AARYANX-->
+    <div class="clock"></div>
+    <script>
+        // Created by AARYANX
+
+        window.addEventListener("DOMContentLoaded", () => {
+            (function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.querySelector('.clock').innerHTML =
+                    h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            })();
+
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }; // add zero in front of numbers < 10
+                return i;
+            }
+        });
+    </script>
+</body>
+<!--Created by AARYANX-->
+
+</html>

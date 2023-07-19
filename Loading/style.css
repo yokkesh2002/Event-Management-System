@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1,
+p,
+h2,
+h3,
+h4,
+ul,
+li,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    font-family: ' sans-serif';
+}
+
+#neon-button {
+    background-color: #222;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 3px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000, 0 0 80px #ff0000, 0 0 100px #ff0000, 0 0 150px #ff0000;
+}
+
+.loading-page {
+    background: #0d0d0d;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-page .counter {
+    text-align: center;
+}
+
+.loading-page .counter p {
+    font-size: 45px;
+    font-weight: 100;
+    color: red;
+}
+
+.loading-page .counter h1 {
+    color: white;
+    font-size: 100px;
+    margin-top: -10px;
+}
+
+.loading-page .counter hr {
+    background: red;
+    border: none;
+    height: 1px;
+}
+
+.loading-page .counter {
+    position: relative;
+    width: 200px;
+}
+
+.loading-page .counter h1.abs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.loading-page .counter .color {
+    width: 0px;
+    overflow: hidden;
+    color: red;
+}

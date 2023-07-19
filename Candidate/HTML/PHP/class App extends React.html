@@ -1,0 +1,7 @@
+class App extends React.Component { state={ btn_color:'red' }; onClick=(event)=>{ this.setState({ btn_color:'green' }) } render(){ return(
+<div>
+    <button onClick={this.onClick} className={this.state.btn_color}>
+          Add To Cart 
+        </button></div>
+) } } ReactDOM.render(
+<App />, document.querySelector('#yk') )

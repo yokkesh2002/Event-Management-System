@@ -1,0 +1,19 @@
+body {padding:40px 80px;}
+li {list-style-type:none; margin-bottom:70px;}
+
+
+a {position:relative; border:1px solid #ccc; border-radius:6px; text-decoration:none; padding:35px 20px 13px 60px; margin-right:40px; color:#444; background:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/download.png') 2px 0 no-repeat;}
+a:hover {border-color:#444; box-shadow: 0 0 10px #444;}
+a:active {border-color:#ccc; box-shadow:none;}
+
+a[href$=".ppt"]:before, a[href$=".pdf"]:before, a[href$=".doc"]:before, a[href$=".xls"]:before, a[href$=".zip"]:before {position:absolute; width:62px; height:72px; top:2px; left:2px; transition:all .4s;}
+
+a[href$=".ppt"]:before {content:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/ppt.png');}
+a[href$=".pdf"]:before {content:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/pdf.png');}
+a[href$=".doc"]:before {content:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/doc.png');}
+a[href$=".xls"]:before {content:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/xls.png');}
+a[href$=".zip"]:before {content:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/zip.png');}
+
+a[href$=".ppt"]:hover:before, a[href$=".pdf"]:hover:before, a[href$=".doc"]:hover:before, a[href$=".xls"]:hover:before, a[href$=".zip"]:hover:before {opacity:0;}
+
+a[href$=".ppt"]:after, a[href$=".pdf"]:after, a[href$=".doc"]:after, a[href$=".xls"]:after, a[href$=".zip"]:after {content:"Download"; position:absolute; top:10px; left:60px; color:#aaa;}
